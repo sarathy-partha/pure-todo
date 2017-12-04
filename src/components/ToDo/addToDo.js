@@ -1,11 +1,11 @@
 import { ToDoCard } from './toDoCard';
-import { showToastToDo, showToastDeleteToDo } from './toastToDo';
+import { showToastToDo } from './toastToDo';
 import { deleteToDo } from './deleteToDo';
 import { updateToDo } from './updateToDo';
 
-var selectedToDo, daysToGo;
-
 export default function addToDo()  {
+    let selectedToDo, daysToGo;
+
     let ul = document.getElementById("ToDoList");
     let newLI = document.createElement("LI");
     ul.appendChild(newLI);

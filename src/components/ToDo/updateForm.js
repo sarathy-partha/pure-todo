@@ -1,12 +1,11 @@
 var daysToGo;
 
 export default function updateForm(selectedToDo) {
-    document.getElementById("btnSaveToDo").addEventListener("click", function () {
-        document.getElementById("ToDoTitle" + selectedToDo).textContent = document.getElementById("todo_title").value;
-        document.getElementById("ToDoDesc" + selectedToDo).textContent = document.getElementById("todo_desc").value;
-        calculateDays();
-        document.getElementById("ToDoBadge" + selectedToDo).textContent = daysToGo;
-    });
+
+    document.getElementById("todo_title").value = document.getElementById("ToDoTitle" + selectedToDo).textContent;
+    document.getElementById("todo_desc").value = document.getElementById("ToDoDesc" + selectedToDo).textContent;
+
+    document.getElementById("btnSaveToDo").addEventListener("click", handleUpdateClick, false);
 
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
@@ -16,6 +15,14 @@ export default function updateForm(selectedToDo) {
         close: 'Ok',
         closeOnSelect: false // Close upon selecting a date,
     });
+
+    function handleUpdateClick() {
+        document.getElementById("ToDoTitle" + selectedToDo).textContent = document.getElementById("todo_title").value;
+        document.getElementById("ToDoDesc" + selectedToDo).textContent = document.getElementById("todo_desc").value;
+        calculateDays();
+        document.getElementById("ToDoBadge" + selectedToDo).textContent = daysToGo;
+        document.getElementById("btnSaveToDo").removeEventListener("click", handleUpdateClick, false);
+    }
 }
 
 function calculateDays() {

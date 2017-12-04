@@ -1,6 +1,6 @@
-import partha from '../../Assets/images/partha.jpg'
+import logo from '../../Assets/images/logo.jpg'
 
 export const profilePic =
     `
-        <img src='${partha}' class="profilePic">
+        <img src='${logo}' class="profilePic">
     `;

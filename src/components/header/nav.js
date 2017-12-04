@@ -13,10 +13,10 @@ export const nav =
                     <div id="Header"></div>
                 </li>
             <li>
-                <a href="#">Source</a>
+                <a class="waves-effect teal btn waves-teal" target="_blank" href="https://glcgitlab.southindia.cloudapp.azure.com/webtech/todo-purejs">Source</a>
             </li>
             <li>
-                <a href="#">Email me</a>
+                <a href="mailto:orchardweb.Technologies@mindtreeonline.onmicrosoft.com?subject=Query about {......}">Email me</a>
             </li>
             <li>
                 <a href="#">Help</a>
@@ -24,10 +24,10 @@ export const nav =
         </ul>
         <ul class="side-nav" id="mobile">
             <li>
-                <a href="#">Source</a>
+            <a target="_blank" href="https://glcgitlab.southindia.cloudapp.azure.com/webtech/todo-purejs">Source</a>
             </li>
             <li>
-                <a href="#">Email me</a>
+            <a href="mailto:orchardweb.Technologies@mindtreeonline.onmicrosoft.com?subject=Query about {......}">Email me</a>
             </li>
             <li>
                 <a href="#">Help</a>

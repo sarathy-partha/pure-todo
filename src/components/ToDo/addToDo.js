@@ -9,7 +9,7 @@ export default function addToDo()  {
     let ul = document.getElementById("ToDoList");
     let newLI = document.createElement("LI");
     ul.appendChild(newLI);
-    let newLI_id = "todoItem" + (ul.childNodes.length - 1);
+    let newLI_id = "todoItem" + (ul.childNodes.length);
     newLI.id = newLI_id;
     newLI.innerHTML = ToDoCard;
     document.getElementById("UpdateToDo").id = "UpdateToDo" + newLI_id;

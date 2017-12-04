@@ -7,6 +7,9 @@ import { footer } from './components/footer/footer';
 import $ from 'jquery';
 import 'materialize-css/dist/js/materialize.min.js';
 import 'materialize-css/dist/css/materialize.min.css';
+import { LoadToDo } from "./components/ToDo/loadToDo";
+
+LoadToDo();
 
 document.getElementById('nav').innerHTML = nav;
 

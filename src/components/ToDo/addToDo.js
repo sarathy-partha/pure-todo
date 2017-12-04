@@ -2,9 +2,9 @@ import { ToDoCard } from './toDoCard';
 import { showToastToDo } from './toastToDo';
 import { deleteToDo } from './deleteToDo';
 import { updateToDo } from './updateToDo';
+import { storeToDo } from './storeToDo';
 
 export default function addToDo()  {
-    let selectedToDo, daysToGo;
 
     let ul = document.getElementById("ToDoList");
     let newLI = document.createElement("LI");
@@ -20,6 +20,8 @@ export default function addToDo()  {
     Materialize.fadeInImage('#' + newLI_id);
 
     showToastToDo(newLI_id);
+
+    storeToDo(newLI_id);
 
     updateToDo(newLI_id);
     

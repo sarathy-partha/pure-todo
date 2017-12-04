@@ -13,7 +13,7 @@ Steps to Install
 
  1. Ensure **webpack** and **webpack-dev-server** are installed globally
 	 
-    `npm --install -g webpack webpack-dev-server`
+    `npm install -g webpack webpack-dev-server`
     
  2. Then run `'npm install'` using command line
  3. To run the app, `'npm start'`

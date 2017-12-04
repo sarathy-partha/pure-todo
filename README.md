@@ -10,7 +10,6 @@ Hey! Thank you for visiting my Repo. This To Do app is purely built using plain 
 Steps to Install
 -------------
 
-StackEdit stores your documents in your browser, which means all your documents are automatically saved locally and are accessible **offline!**
 
  1. Ensure **webpack** and **webpack-dev-server** are installed globally
 	 

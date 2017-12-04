@@ -1,11 +1,11 @@
 import { ToDoCard } from './toDoCard';
 import { showToastToDo, showToastDeleteToDo } from './toastToDo';
-import { updateToDo } from './updateToDo';
 import { deleteToDo } from './deleteToDo';
+import { updateToDo } from './updateToDo';
 
 var selectedToDo, daysToGo;
 
-export default () => {
+export default function addToDo()  {
     let ul = document.getElementById("ToDoList");
     let newLI = document.createElement("LI");
     ul.appendChild(newLI);
@@ -22,6 +22,6 @@ export default () => {
     showToastToDo(newLI_id);
 
     updateToDo(newLI_id);
-
+    
     deleteToDo(newLI_id);
 }

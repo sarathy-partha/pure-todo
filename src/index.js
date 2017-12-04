@@ -2,7 +2,6 @@ import "babel-polyfill";
 import { header } from './components/header/header';
 import { profilePic } from './components/profilePic/profilePic';
 import { styles } from './styles.scss';
-import { addToDo } from './components/ToDo/addToDo';
 import { nav } from './components/header/nav';
 import { footer } from './components/footer/footer';
 import $ from 'jquery';
@@ -17,7 +16,13 @@ document.getElementById('Header').innerHTML = header;
 
 document.getElementById('footer').innerHTML = footer;
 
-document.getElementById('btnAddToDo').addEventListener("click", addToDo, false);
+var btnAddToDo = document.getElementById('btnAddToDo');
+
+btnAddToDo.onclick = e => import(/* webpackChunkName: "addToDo" */ './components/ToDo/addToDo')
+    .then(module => {
+        var addToDo = module.default;
+        addToDo();
+    });
 
 document.getElementById('btnOpenAddHelp').addEventListener("click", function () { $('.tap-target').tapTarget('open'); }, false);
 

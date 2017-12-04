@@ -6,7 +6,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+  },
   devtool: "source-map",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -26,7 +28,8 @@ module.exports = {
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env']
+          presets: ['@babel/preset-env'],
+          plugins: ['syntax-dynamic-import']
         }
       }
     },
@@ -75,12 +78,16 @@ module.exports = {
       'window.$': 'jquery',
       'window.jQuery': 'jquery'
     }),
+    //new webpack.optimize.CommonsChunkPlugin({
+    //  name: 'common' // Specify the common bundle's name.
+   // }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
     sourceMapFilename: '[name].bundle.map.js'
   },
 };

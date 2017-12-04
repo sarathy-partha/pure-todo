@@ -5,7 +5,7 @@ import { deleteToDo } from './deleteToDo';
 
 var selectedToDo, daysToGo;
 
-export function addToDo() {
+export default () => {
     let ul = document.getElementById("ToDoList");
     let newLI = document.createElement("LI");
     ul.appendChild(newLI);

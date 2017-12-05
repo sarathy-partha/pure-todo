@@ -1,4 +1,5 @@
 import { storeToDo } from "./storeToDo";
+import { ToDoBadge } from "./ToDoBadge";
 
 var daysToGo;
 
@@ -22,8 +23,8 @@ export default function updateForm(selectedToDo) {
         document.getElementById("ToDoTitle" + selectedToDo).textContent = document.getElementById("todo_title").value;
         document.getElementById("ToDoDesc" + selectedToDo).textContent = document.getElementById("todo_desc").value;
         calculateDays();
-        document.getElementById("ToDoBadge" + selectedToDo).textContent = daysToGo;
-        storeToDo(selectedToDo);
+        ToDoBadge(selectedToDo, daysToGo);
+        storeToDo(selectedToDo, daysToGo);
         document.getElementById("btnSaveToDo").removeEventListener("click", handleUpdateClick, false);
     }
 }

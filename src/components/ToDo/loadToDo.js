@@ -1,6 +1,7 @@
 import { ToDoCard } from './toDoCard';
 import { deleteToDo } from './deleteToDo';
 import { updateToDo } from './updateToDo';
+import { ToDoBadge } from './ToDoBadge';
 
 export function LoadToDo() {
     let ul = document.getElementById("ToDoList");
@@ -21,7 +22,7 @@ export function LoadToDo() {
 
             document.getElementById("ToDoTitle" + newLI_id).textContent = currentToDo.title;
             document.getElementById("ToDoDesc" + newLI_id).textContent = currentToDo.desc;
-            document.getElementById("ToDoBadge" + newLI_id).textContent = currentToDo.days;
+            ToDoBadge(newLI_id, currentToDo.days);
 
             updateToDo(newLI_id);
 

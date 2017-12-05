@@ -9,7 +9,7 @@ export const ToDoCard =
         <div class="card-action">
           <a class="modal-trigger" href="#UpdateForm" id="UpdateToDo">UPDATE</a>
           <a id="DeleteToDo" href="#">DELETE</a>
-          <span id="ToDoBadge" class="right new badge" data-badge-caption="days"></span>
+          <span id="ToDoBadge" class="right new badge" data-badge-caption=""></span>
         </div>
       </div>
     </div>

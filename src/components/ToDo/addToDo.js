@@ -17,6 +17,7 @@ export default function addToDo()  {
     document.getElementById("DeleteToDo").id = "DeleteToDo" + newLI_id;
     document.getElementById("ToDoTitle").id = "ToDoTitle" + newLI_id;
     document.getElementById("ToDoDesc").id = "ToDoDesc" + newLI_id;
+    document.getElementById("ToDoBadge").id = "ToDoBadge" + newLI_id;
     ToDoBadge(newLI_id,0);
     Materialize.fadeInImage('#' + newLI_id);
 

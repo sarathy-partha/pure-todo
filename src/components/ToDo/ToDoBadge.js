@@ -1,6 +1,7 @@
 export function ToDoBadge(newLI_id, days) {
-    let toDoBadgeValue = 0;
+    let toDoBadgeValue;
     let toDoBadgeElement = document.getElementById("ToDoBadge" + newLI_id);
+    toDoBadgeElement.className = "right new badge";
     switch (true) {
         case Number(days) > 0:
             toDoBadgeValue = "Due in " + days + " days";

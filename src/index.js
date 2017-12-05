@@ -8,6 +8,16 @@ import $ from 'jquery';
 import 'materialize-css/dist/js/materialize.min.js';
 import 'materialize-css/dist/css/materialize.min.css';
 import { LoadToDo } from "./components/ToDo/loadToDo";
+import swURL from "file-loader?name=sw.js!babel-loader!./sw";
+import icon72 from './images/icons/icon-72x72.png';
+import icon96 from './images/icons/icon-96x96.png';
+import icon128 from './images/icons/icon-128x128.png';
+import icon144 from './images/icons/icon-144x144.png';
+import icon152 from './images/icons/icon-152x152.png';
+import icon192 from './images/icons/icon-192x192.png';
+import icon384 from './images/icons/icon-384x384.png';
+import icon512 from './images/icons/icon-512x512.png';
+import '!file-loader?name=[name].[ext]!./manifest.json';
 
 LoadToDo();
 
@@ -32,3 +42,21 @@ document.getElementById('btnOpenAddHelp').addEventListener("click", function () 
 $(".button-collapse").sideNav();
 
 $('.modal').modal();
+
+// Service Workersm - Powerup and work offline
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js');
+    });
+    /* 
+        window.addEventListener('offline', function (e) {
+            console.log('offline');
+            Materialize.toast("You are offline", 3000);
+        });
+    
+        window.addEventListener('online', function (e) {
+            console.log('online');
+            Materialize.toast("You are online", 3000);
+        }); */
+}

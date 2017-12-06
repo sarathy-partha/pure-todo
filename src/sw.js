@@ -18,20 +18,22 @@ self.addEventListener('install', event => {
     );
 });
 
-self.addEventListener('activate', event => {
-    const cacheWhitelist = [CACHE_NAME];
-    event.waitUntil(
-        caches.keys()
-            .then(keyList =>
-                Promise.all(keyList.map(key => {
-                    if (!cacheWhitelist.includes(key)) {
-                        return caches.delete(key);
-                    }
-                }))
-            )
-            .then(() => self.clients.claim())
-    );
-});
+self.addEventListener('activate', function(event) {
+    
+      var cacheWhitelist = [CACHE_NAME];
+    
+      event.waitUntil(
+        caches.keys().then(function(cacheNames) {
+          return Promise.all(
+            cacheNames.map(function(cacheName) {
+              if (cacheWhitelist.indexOf(cacheName) === -1) {
+                return caches.delete(cacheName);
+              }
+            })
+          );
+        })
+      );
+    });
 
 self.addEventListener('fetch', function (event) {
     event.respondWith(

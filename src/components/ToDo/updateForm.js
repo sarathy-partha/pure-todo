@@ -4,10 +4,11 @@ import { ToDoBadge } from "./ToDoBadge";
 var daysToGo;
 
 export default function updateForm(selectedToDo) {
-
+    document.getElementById("btnSaveToDo").removeEventListener("click", handleUpdateClick, false);
     document.getElementById("todo_title").value = document.getElementById("ToDoTitle" + selectedToDo).textContent;
     document.getElementById("todo_desc").value = document.getElementById("ToDoDesc" + selectedToDo).textContent;
-
+    let currentToDo = JSON.parse(localStorage.getItem(selectedToDo));
+    document.getElementById("ToDoDate").value = currentToDo.dueDate;
     document.getElementById("btnSaveToDo").addEventListener("click", handleUpdateClick, false);
 
     $('.datepicker').pickadate({

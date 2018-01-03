@@ -13,6 +13,3 @@ Steps to Install
     
  2. Then run `'npm install'` using command line
  3. To run the app, `'npm start'`
-=======
-# pure-todo
-A Simple Feature Rich ToDo app with plain JavaScript

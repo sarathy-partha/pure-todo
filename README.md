@@ -6,7 +6,8 @@ Features include:
 * Lazy loading of Add & Update Todo components - Using Dynamic Imports
 * Fully offline enabled through Service Workers
 * Local storage for data
-* No JS Libraries other than Materialize-CSS for styling
+* No 3rd party js Libraries or Frameworks used other than Materialize-CSS for styling
+* Full potential of Webpack utilized
 
 ----------
 

@@ -1,4 +1,12 @@
-Hey! Thank you for visiting my Repo. This To Do app is purely built using plain JavaScript with core ES6 features. It does not store data though. Styling is done using materialize-css
+Hey! Thank you for visiting my Repo. This To Do app is purely built using plain JavaScript (ES6)
+
+Features include:
+* Core ES6 Features
+* Component design
+* Lazy loading of Add & Update Todo components - Using Dynamic Imports
+* Fully offline enabled through Service Workers
+* Local storage for data
+* No JS Libraries other than Materialize-CSS for styling
 
 ----------
 

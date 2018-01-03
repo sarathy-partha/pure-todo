@@ -46,17 +46,16 @@ $('.modal').modal();
 // Service Workersm - Powerup and work offline
 
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/sw.js');
+    navigator.serviceWorker.register('sw.js').then(registration => {
+        // registration worked
+        console.log('Registration succeeded.');
+        var refreshButton = document.getElementById('btnHardRefresh');
+        refreshButton.onclick = function () {
+            console.log('Registration updated.');
+            registration.update();
+        }
+    }).catch(function (error) {
+        // registration failed
+        console.log('Registration failed with ' + error);
     });
-    /* 
-        window.addEventListener('offline', function (e) {
-            console.log('offline');
-            Materialize.toast("You are offline", 3000);
-        });
-    
-        window.addEventListener('online', function (e) {
-            console.log('online');
-            Materialize.toast("You are online", 3000);
-        }); */
-}
+};

@@ -11,7 +11,7 @@ self.addEventListener('install', event => {
                         cache.addAll([
                             "/",
                             "https://fonts.googleapis.com/icon?family=Material+Icons",
-                            "https://fonts.gstatic.com/s/materialicons/v32/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2"
+                            "https://fonts.gstatic.com/s/materialicons/v33/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2"
                         ])
                     )
             ).then(() => self.skipWaiting())

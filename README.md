@@ -1,3 +1,4 @@
+# ToDo using Pure JavaScript
 Hey! Thank you for visiting my Repo. This To Do app is purely built using plain JavaScript (ES6)
 
 Features include:

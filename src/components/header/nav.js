@@ -13,13 +13,13 @@ export const nav =
                     <div id="Header"></div>
                 </li>
             <li>
-                <a class="waves-effect teal btn waves-teal" target="_blank" href="https://glcgitlab.southindia.cloudapp.azure.com/webtech/todo-purejs">Source</a>
+                <a class="waves-effect teal btn waves-teal" target="_blank" href="https://github.com/partha360/pure-todo">Source</a>
             </li>
             <li>
                 <a id="btnHardRefresh" class="waves-effect blue btn waves-red">REFRESH</a>
             </li>
             <li>
-                <a href="mailto:orchardweb.Technologies@mindtreeonline.onmicrosoft.com?subject=Query about {......}">Email me</a>
+                <a href="#">Email me</a>
             </li>
             <li>
                 <a href="#">Help</a>

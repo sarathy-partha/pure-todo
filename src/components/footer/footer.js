@@ -26,7 +26,7 @@ export const footer =
     <div class="footer-copyright">
       <div class="container">
       © 2017 Copyright @Parthasarathy S
-      <a class="grey-text text-lighten-4 right" href="onenote:https://mindtreeonline.sharepoint.com/teams/edigitalcoe/webtech/SiteAssets/Web%20Technologies%20Notebook/Learning.one#section-id={46C41999-070A-4CE4-A57F-5FC50A0389E9}&end">More Links</a>
+      <a class="grey-text text-lighten-4 right" href="#">More Links</a>
       </div>
     </div>
   </footer>

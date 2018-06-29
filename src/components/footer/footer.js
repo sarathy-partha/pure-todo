@@ -1,5 +1,4 @@
-export const footer =
-    `
+export const footer = `
     <footer class="page-footer">
     <div class="container">
       <div class="row">
